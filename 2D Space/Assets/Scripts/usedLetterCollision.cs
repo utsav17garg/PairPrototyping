@@ -11,6 +11,7 @@ public class usedLetterCollision : MonoBehaviour
     public int index;
     private StringBuilder collectedLetters = new StringBuilder();
     public TextMeshProUGUI collectedLettersText;
+    public GameObject timer;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -27,6 +28,10 @@ public class usedLetterCollision : MonoBehaviour
                 index = answer.IndexOf(letter);
                 collectedLettersText.text = collectedLettersText.text.Remove(index * 2, 1).Insert(index * 2, letter);
                 Destroy(gameObject);
+                TimeManager script = timer.GetComponent<TimeManager>();
+                Debug.Log(script);
+                script.addTime();
+                
 
             }
             else
