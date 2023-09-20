@@ -370,10 +370,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1647420950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce262577bd6554ba68495d4e6dc72619, type: 3}
+  m_Script: {fileID: 11500000, guid: b0bf2b59fc25b426b8121a5dca32111b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spaceShip: {fileID: 1679302473}
+  answer: JUPITER
+  index: 0
+  collectedLettersText: {fileID: 43062644}
 --- !u!1 &1679302473
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,8 +718,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2019542263}
   - component: {fileID: 2019542262}
-  - component: {fileID: 2019542261}
   - component: {fileID: 2019542264}
+  - component: {fileID: 2019542265}
   m_Layer: 0
   m_Name: J
   m_TagString: Untagged
@@ -724,22 +727,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2019542261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019542260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0bf2b59fc25b426b8121a5dca32111b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spaceShip: {fileID: 1679302473}
-  answer: JUPITER
-  index: 0
-  collectedLettersText: {fileID: 43062644}
 --- !u!212 &2019542262
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -823,6 +810,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2019542265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019542260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0bf2b59fc25b426b8121a5dca32111b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceShip: {fileID: 1679302473}
+  answer: JUPITER
+  index: 0
+  collectedLettersText: {fileID: 43062644}
 --- !u!1001 &6662339801481656417
 PrefabInstance:
   m_ObjectHideFlags: 0

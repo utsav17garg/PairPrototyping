@@ -26,12 +26,18 @@ public class usedLetterCollision : MonoBehaviour
             {
                 index = answer.IndexOf(letter);
                 collectedLettersText.text = collectedLettersText.text.Remove(index * 2, 1).Insert(index * 2, letter);
-               
+                Destroy(gameObject);
+
+            }
+            else
+            {
+                Destroy(collision.gameObject);
             }
             Debug.Log(collision.collider);
-            Destroy(gameObject);
+            
 
             // Pick the letter and fill the blank
+            
         }
         else
         {
