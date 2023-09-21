@@ -10,12 +10,15 @@ public class projectile : MonoBehaviour
     public int speed = 10;
 
     void Update()
-    {
+    { 
         if (Input.GetMouseButtonDown(0))
         {
             shoot();
         }
     }
+
+  
+        
 
     public void shoot()
     {

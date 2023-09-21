@@ -17,6 +17,12 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         startingTime -= Time.deltaTime;
+        if(startingTime < 0)
+        {
+            Debug.Log("Game Over");
+            GameObject spaceShip = GameObject.FindGameObjectsWithTag("Player")[0];
+            Destroy(spaceShip);
+        }
         theText.text = "" + Mathf.Round(startingTime);
     }
 
@@ -26,5 +32,12 @@ public class TimeManager : MonoBehaviour
         float asd = float.Parse(theText.text,
       System.Globalization.CultureInfo.InvariantCulture) + 5;
         startingTime = asd;
+    }
+
+    public void penaltyTime()
+    {
+        float penalty = float.Parse(theText.text,
+      System.Globalization.CultureInfo.InvariantCulture) - 20;
+        startingTime = penalty;
     }
 }
