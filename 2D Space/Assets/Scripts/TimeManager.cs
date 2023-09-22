@@ -9,8 +9,11 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     public TextMeshProUGUI theText;
     public float startingTime;
-    void Start()
+    private GameConroller gameOverPanel;
+    private void Start()
     {
+
+        gameOverPanel = GameObject.Find("GameController").GetComponent<GameConroller>();
     }
 
     // Update is called once per frame
@@ -19,18 +22,22 @@ public class TimeManager : MonoBehaviour
         startingTime -= Time.deltaTime;
         if(startingTime < 0)
         {
+            theText.text = "" + 0;
             Debug.Log("Game Over");
             GameObject spaceShip = GameObject.FindGameObjectsWithTag("Player")[0];
             Destroy(spaceShip);
+            Debug.Log("Destroyed");
+            //Time.timeScale = 0;
+            gameOverPanel.show();
         }
         theText.text = "" + Mathf.Round(startingTime);
     }
 
     public void addTime()
     {
-        Debug.Log("hello");
+        Debug.Log("Adding Time");
         float asd = float.Parse(theText.text,
-      System.Globalization.CultureInfo.InvariantCulture) + 5;
+      System.Globalization.CultureInfo.InvariantCulture) + 10;
         startingTime = asd;
     }
 

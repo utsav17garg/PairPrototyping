@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6285158844719557967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.380187, y: 1.4730823, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,11 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0bf2b59fc25b426b8121a5dca32111b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceShip: {fileID: 1380312838970636757, guid: 8077aa01bdb354e68af4d41897206cde, type: 3}
   answer: NEBULA
   index: 0
   collectedLettersText: {fileID: 2895518239250124728, guid: d350b95b5ffe143b49aea30ff062f3c3, type: 3}
-  timer: {fileID: 4181465666324019920, guid: 3552efb38eb7d4caba323d0cf247bcfb, type: 3}
+  gameOverPanel: {fileID: 4606263204789005952, guid: 4b82727ea4d6d44c3b1f4f8c79c2557f, type: 3}
   speed: 10
 --- !u!61 &574089990260316958
 BoxCollider2D:
