@@ -12,13 +12,17 @@ public class usedLetterCollision : MonoBehaviour
     private StringBuilder collectedLetters = new StringBuilder();
     public TextMeshProUGUI collectedLettersText;
     private GameConroller gameOverPanel;
+    public Material Nebula;
+    Renderer rend;
+
 
     public float speed = 10.0f;
     private Rigidbody2D rb;
 
     private void Start()
     {
-
+        rend = GameObject.Find("Background").GetComponent<Renderer>();
+        rend.enabled = true;
         gameOverPanel = GameObject.Find("GameController").GetComponent<GameConroller>();
     }
 
@@ -43,8 +47,23 @@ public class usedLetterCollision : MonoBehaviour
             {
                 index = answer.IndexOf(letter);
                 collectedLettersText.text = collectedLettersText.text.Remove(index * 2, 1).Insert(index * 2, "" + letter);
+                int count = 0;
+
+                for(int i =0; i< collectedLettersText.text.Length; i++)
+                {
+                    if (collectedLettersText.text[i] == '_')
+                    {
+                        count += 1;
+                    }
+                }
+                if (count == 3)
+                {
+                    Debug.Log("33");
+                    rend.sharedMaterial = Nebula;
+
+                }
                 if (!collectedLettersText.text.Contains('_')) {
-                    //Time.timeScale = 0;
+                    Time.timeScale = 0;
                     Debug.Log("You Won");
                     gameOverPanel.gameWonShow();
                 }
@@ -56,7 +75,7 @@ public class usedLetterCollision : MonoBehaviour
                 Destroy(this.gameObject);
                 Debug.Log("Destroyed");
                 Destroy(collision.gameObject);
-                //Time.timeScale = 0;
+                Time.timeScale = 0;
                 Debug.Log(gameOverPanel);
                 gameOverPanel.show();
                 Debug.Log("GameOver");

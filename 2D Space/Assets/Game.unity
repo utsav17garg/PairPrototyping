@@ -433,7 +433,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_BackGroundColor: {r: 0.20754719, g: 0.2046102, b: 0.2046102, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2089,6 +2089,10 @@ PrefabInstance:
     - target: {fileID: 4606263204789005952, guid: 4b82727ea4d6d44c3b1f4f8c79c2557f, type: 3}
       propertyPath: m_Name
       value: GameOverPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4606263204789005952, guid: 4b82727ea4d6d44c3b1f4f8c79c2557f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4606263204789005955, guid: 4b82727ea4d6d44c3b1f4f8c79c2557f, type: 3}
       propertyPath: m_Pivot.x

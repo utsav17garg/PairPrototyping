@@ -27,7 +27,7 @@ public class TimeManager : MonoBehaviour
             GameObject spaceShip = GameObject.FindGameObjectsWithTag("Player")[0];
             Destroy(spaceShip);
             Debug.Log("Destroyed");
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
             gameOverPanel.show();
         }
         theText.text = "" + Mathf.Round(startingTime);

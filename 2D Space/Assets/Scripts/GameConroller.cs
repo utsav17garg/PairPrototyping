@@ -33,6 +33,7 @@ public class GameConroller : MonoBehaviour
 
     public void reload()
     {
+        Time.timeScale = 1;
         Debug.Log("reload");
         SceneManager.LoadScene("Game");
     }

@@ -18,7 +18,7 @@ public class Bordere : MonoBehaviour
         BoxCollider2D spaceCollider = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<BoxCollider2D>();
         if(collision.collider == spaceCollider)
         {
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
             Destroy(collision.gameObject);
             gameOverPanel.show();
         }

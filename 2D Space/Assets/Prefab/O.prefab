@@ -102,7 +102,7 @@ MonoBehaviour:
   answer: NEBULA
   index: 0
   collectedLettersText: {fileID: 2895518239250124728, guid: d350b95b5ffe143b49aea30ff062f3c3, type: 3}
-  gameOverPanel: {fileID: 4606263204789005952, guid: 4b82727ea4d6d44c3b1f4f8c79c2557f, type: 3}
+  Nebula: {fileID: 2100000, guid: c7130ba2adcc1418583f10912dbd3d4b, type: 2}
   speed: 10
 --- !u!61 &1342675828957384227
 BoxCollider2D:
